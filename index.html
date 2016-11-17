@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>
+			Driving Game
+		</title>
+		<link rel="stylesheet" type="text/css" href="css/game.css">
+	</head>
+	<body>
+		<div id="animationContainer" class="content-hidden game-container--full game-container">
+			<img class="image-full game-bg" src="images/road_temp.jpg"/>
+			<div class="controller-container">
+			</div>
+		</div>
+		<div id="conclusionContainer" class="content-hidden game-container--full">
+			<img class="video-place-holder" src="images/video_place_holder.jpg"/>
+		</div>
+		<div id="questionContainer" class="content-hidden game-container--content question-container">
+			<form>
+				<p class="question-text">
+					question content
+				</p>
+				<textarea class="question-answer"></textarea>
+				<p class="question-text">
+					question content
+				</p>
+				<textarea class="question-answer"></textarea>
+
+				<div class="form-button-container">
+					<a class="form-button">Save</a><a class="form-button">Quit</a>
+				</div>
+			</form>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+	</body>
+</html>
