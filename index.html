@@ -10,13 +10,28 @@
 	</head>
 	<body>
 		<div id="animationContainer" class="content-hidden game-container--full game-container">
-			<img class="image-full game-bg" src="images/road_temp.jpg"/>
+			<img class="game-image game-bg" src="images/road_temp.jpg"/>
+			<canvas id="road"></canvas>
 			<div class="controller-container">
+				<div class="gps-container">
+					<div class="gps-display">
+						<canvas id="gps"></canvas>
+					</div>
+				</div>
+				<div class="time-display">00:33</div>
+				
+				<div id="arrowTop" class="arrow-top"></div>
+				<div id="arrowLeft" class="arrow-left"></div>
+				<div id="arrowRight" class="arrow-right clickable"></div>
 			</div>
 		</div>
+
+
 		<div id="conclusionContainer" class="content-hidden game-container--full">
 			<img class="video-place-holder" src="images/video_place_holder.jpg"/>
 		</div>
+
+
 		<div id="questionContainer" class="content-hidden game-container--content question-container">
 			<form>
 				<p class="question-text">

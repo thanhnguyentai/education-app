@@ -19,13 +19,21 @@ body {
 	position: relative;
 	overflow: hidden;
 }
-.image-full {
+.game-image {
+	position: absolute;
+}
+.game-bg {
+	z-index: 0;
 	width: 100%;
 	position: relative;
 	display: block;
 }
-.game-bg {
-	z-index: 0;
+canvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
 .controller-container {
 	position: absolute;
@@ -36,6 +44,75 @@ body {
 	left: -50px;
 	bottom: -100px;
 }
+.gps-container {
+	background: url('../images/gps_device.png') no-repeat center center;
+	background-size: 100% 100%;
+	display: none;
+	position: absolute;
+}
+.gps-display {
+	position: absolute;
+	background-color: #0000ff;
+}
+.time-display {
+	position: absolute;
+	background: url('../images/circle_time.png') no-repeat center center;
+	background-size: 100% 100%;
+	color: #63dd13;
+	text-align: center;
+	width: 60px;
+	height: 60px;
+	line-height: 58px;
+	font-size: 18px;
+	font-weight: bold;
+	right: 85px;
+	top: -15px;
+}
+.arrow-top {
+	background: url('../images/arrow_up_red.png') no-repeat center center;
+	background-size: 100% 100%;
+
+	width: 45px;
+	height: 40px;
+
+	position: absolute;
+	top: 10px;
+	right: 35px;
+}
+.arrow-top.clickable {
+	background: url('../images/arrow_up_green.png') no-repeat center center;
+	background-size: 100% 100%;
+}
+.arrow-left {
+	background: url('../images/arrow_left_red.png') no-repeat center center;
+	background-size: 100% 100%;
+
+	width: 40px;
+	height: 45px;
+
+	position: absolute;
+	top: 52px;
+	right: 70px;
+}
+.arrow-left.clickable {
+	background: url('../images/arrow_left_green.png') no-repeat center center;
+	background-size: 100% 100%;
+}
+.arrow-right {
+	background: url('../images/arrow_right_red.png') no-repeat center center;
+	background-size: 100% 100%;
+
+	width: 40px;
+	height: 45px;
+
+	position: absolute;
+	top: 52px;
+	right: 5px;
+}
+.arrow-right.clickable {
+	background: url('../images/arrow_right_green.png') no-repeat center center;
+	background-size: 100% 100%;
+}
 
 @media only screen and (min-width: 768px) { 
 	.controller-container { 
@@ -43,6 +120,34 @@ body {
 		height: 400px;
 		left: -100px;
 		bottom: -200px;
+	}
+
+	.time-display {
+		width: 120px;
+		height: 120px;
+		line-height: 118px;
+		font-size: 34px;
+		right: 175px;
+		top: -20px;
+	}
+
+	.arrow-top {
+		width: 61px;
+		height: 54px;
+		top: 60px;
+    	right: 75px;
+	}
+	.arrow-left {
+		width: 54px;
+		height: 61px;
+		top: 125px;
+    	right: 140px;
+	}
+	.arrow-right {
+		width: 54px;
+		height: 61px;
+		top: 125px;
+    	right: 20px;
 	}
 }
 
@@ -53,6 +158,42 @@ body {
 		left: -150px;
 		bottom: -250px;
 	}
+
+	.gps-container {
+		display: block;
+		width: 250px;
+		height: 168px;
+		top: 70px;
+		right: 20px;
+	}
+	.gps-display {
+		top: 15px;
+	    left: 15px;
+	    right: 14px;
+	    bottom: 14px;
+	}
+
+	.time-display {
+		width: 150px;
+		height: 150px;
+		line-height: 148px;
+		font-size: 44px;
+		right: 190px;
+		top: -20px;
+	}
+
+	.arrow-top {
+		top: 94px;
+    	right: 90px;
+	}
+	.arrow-left {
+		top: 150px;
+    	right: 148px;
+	}
+	.arrow-right {
+	    top: 150px;
+    	right: 40px;
+	}
 }
 
 @media only screen and (min-width: 1600px) {
@@ -61,6 +202,48 @@ body {
 		height: 829px;
 		left: -200px;
 		bottom: -400px;
+	}
+
+	.gps-container {
+		width: 478px;
+		height: 322px;
+		top: 90px;
+		right: 40px;
+	}
+
+	.gps-display {
+	    top: 29px;
+	    left: 29px;
+	    right: 27px;
+	    bottom: 28px;
+	}
+
+	.time-display {
+		width: 270px;
+		height: 270px;
+		line-height: 264px;
+		font-size: 72px;
+		right: 350px;
+		top: -40px;
+	}
+
+	.arrow-top {
+		width: 122px;
+		height: 109px;
+	    top: 130px;
+    	right: 200px;
+	}
+	.arrow-left {
+		width: 109px;
+		height: 122px;
+		top: 250px;
+    	right: 300px;
+	}
+	.arrow-right {
+		width: 109px;
+		height: 122px;
+	    top: 250px;
+    	right: 110px;
 	}
 }
 
